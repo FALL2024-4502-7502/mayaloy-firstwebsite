@@ -87,10 +87,66 @@ footer {
     bottom: 0;
 }
 
-/* Responsive navigation for mobile */
+/* Responsive styles */
+
+/* Mobile (default) */
 @media (max-width: 600px) {
     nav a {
         display: block;
         margin: 10px 0;
+    }
+    
+    h1 {
+        font-size: 2em; /* Adjust header size for mobile */
+    }
+
+    p {
+        font-size: 1em; /* Adjust paragraph size for mobile */
+    }
+
+    ul li {
+        font-size: 1em; /* Adjust list item size for mobile */
+    }
+}
+
+/* 555px */
+@media (max-width: 555px) {
+    body {
+        padding: 10px; /* Add padding for small screens */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Further reduce header size */
+    }
+
+    p {
+        font-size: 0.9em; /* Further reduce paragraph size */
+    }
+
+    ul li {
+        font-size: 0.9em; /* Further reduce list item size */
+    }
+}
+
+/* 800px */
+@media (max-width: 800px) {
+    main {
+        width: 90%; /* Increase main width on medium screens */
+    }
+
+    nav {
+        padding: 15px; /* Increase navigation padding */
+    }
+
+    h1 {
+        font-size: 2.2em; /* Adjust header size for medium screens */
+    }
+
+    p {
+        font-size: 1.1em; /* Adjust paragraph size for medium screens */
+    }
+
+    ul li {
+        font-size: 1.1em; /* Adjust list item size for medium screens */
     }
 }
