@@ -83,7 +83,7 @@ footer {
     padding: 5px;
     width: 100%;
     text-align: center;
-    position: flexible;
+    position: sticky;
     bottom: 0;
 }
 
