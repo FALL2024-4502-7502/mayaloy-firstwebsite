@@ -1,4 +1,4 @@
-gallery.js
+"use strict";
 
 var photoDivs = document.getElementsByClassName("gallery-image");
 
@@ -12,7 +12,7 @@ var currentPhotoNumber = 0;
 
 photoDivs[currentPhotoNumber].classList.remove('hideThis');
 
-photoNumber.innerHTML = (currentPhotoNumber + 1) + " / " + photoDivs.length;
+photoNumber.innerHTML = (currentPhotoNumber + 1) + " out of " + photoDivs.length;
 
 nextButton.addEventListener('click', function() {
   photoDivs[currentPhotoNumber].classList.add("hideThis");
@@ -24,7 +24,7 @@ nextButton.addEventListener('click', function() {
 
   photoDivs[currentPhotoNumber].classList.remove('hideThis');
 
-  photoNumber.innerHTML = (currentPhotoNumber + 1) + " / " + photoDivs.length;
+  photoNumber.innerHTML = (currentPhotoNumber + 1) + " out of " + photoDivs.length;
 
 });
 
@@ -38,6 +38,6 @@ previousButton.addEventListener('click', function() {
 
   photoDivs[currentPhotoNumber].classList.remove('hideThis');
 
-  photoNumber.innerHTML = (currentPhotoNumber + 1) + " / " + photoDivs.length;
+  photoNumber.innerHTML = (currentPhotoNumber + 1) + " out of " + photoDivs.length;
 
 });
