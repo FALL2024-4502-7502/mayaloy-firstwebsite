@@ -62,3 +62,34 @@
     <footer>Maya Loy</footer>
   </body>
 </html>
+<!-- JavaScript -->
+    <script>
+        // Variables to track the gallery
+        const images = document.querySelectorAll('.gallery-image');
+        let currentIndex = 0;
+
+        // Function to update gallery display
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('hideThis', i !== index);
+            });
+            document.getElementById('stepper').innerText = `${index + 1} of ${images.length}`;
+        }
+
+        // Show initial image
+        showImage(currentIndex);
+
+        // Function for Next button
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        // Function for Previous button
+        function previousImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+    </script>
+</body>
+</html>
