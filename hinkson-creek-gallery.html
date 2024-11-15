@@ -1,95 +1,78 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Exploring Hinkson Creek</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Hinkson Creek</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
-            <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="sit-com-list.html">7 of The Best Sit-Coms Ever</a></li>
-        <li><a href="stl-Ice-Cream-by-area.html">Must Try Ice Cream Spots In STL</a></li>
-        <li><a href="hinkson-creek-gallery.html">Exploring Hinkson Creek</a></li>
-      </ul>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="sit-com-list.html">7 of The Best Sit-Coms Ever</a></li>
+            <li><a href="stl-Ice-Cream-by-area.html">Must Try Ice Cream Spots In STL</a></li>
+            <li><a href="hinkson-creek-gallery.html">Exploring Hinkson Creek</a></li>
+        </ul>
     </nav>
+    
     <main id="content">
-      <h1>Three Friends go on an Adventure</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at felis id quam porttitor posuere. Pellentesque nec aliquet est. Nam malesuada consequat condimentum. Aliquam rutrum fermentum odio at mattis. Etiam scelerisque enim sit amet tempor ullamcorper. Vestibulum ultricies metus nibh, ut tristique ligula malesuada vel. Nullam id iaculis est.</p>
+        <h1>Three Friends go on an Adventure</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at felis id quam porttitor posuere...</p>
 
-      <figure class="gallery-image hideThis">
-      <img src="img/walking-on-trail.JPG" alt="Three friends walking on a woodsy trail at hinkson creek.">
-      <figcaption>
-        A group of three friends travels to Hinkson Creek on a sunny Wednesday afternoon after class. Sarah, Hayley, and Anna needed some time to reconnect with nature.
-      </figcaption>
-    </figure>
+        <!-- Gallery Images -->
+        <div class="gallery-container">
+            <figure class="gallery-image">
+                <img src="img/walking-on-trail.JPG" alt="Three friends walking on a woodsy trail at hinkson creek.">
+                <figcaption>A group of three friends travels to Hinkson Creek on a sunny Wednesday afternoon...</figcaption>
+            </figure>
 
-    <figure class="gallery-image hideThis">
-      <img src="img/laughing-by-trail.jpg" alt="Three Friends sit by the creek and laugh with each other.">
-      <figcaption>
-        They sit by the creek and catch up on their week with each other. They're laughing and cracking jokes per usual.
-      </figcaption>
-    </figure>
+            <figure class="gallery-image hideThis">
+                <img src="img/laughing-by-trail.jpg" alt="Three Friends sit by the creek and laugh with each other.">
+                <figcaption>They sit by the creek and catch up on their week with each other...</figcaption>
+            </figure>
 
-    <figure class="gallery-image hideThis">
-      <img src="img/piggy-back-ride.jpg" alt="Sarah gives Hayley a piggy back ride across the rocks at hinkson creek.">
-      <figcaption>
-       After doing some hiking and crossing the river, Hayley's shoes got all muddy. So, Sarah offered her a piggy back ride the rest of the way.
-      </figcaption>
-    </figure>
+            <figure class="gallery-image hideThis">
+                <img src="img/piggy-back-ride.jpg" alt="Sarah gives Hayley a piggy back ride across the rocks at hinkson creek.">
+                <figcaption>After doing some hiking and crossing the river, Hayley's shoes got all muddy...</figcaption>
+            </figure>
 
-    <figure class="gallery-image hideThis">
-      <img src="img/picnic-blanket.jpg" alt="Three girls put down a picnic blanket in the grass on a bright sunny day">
-      <figcaption>
-        After their hike, they found a quiet spot. They then set out a blanket to hang out a have a picnic on this nice day.
-    <figure class="gallery-image hideThis">
-      <img src="img/reading-book-at-picnic.jpg" alt="Two friends read a book on a flowery blanket in the grass on a bright sunny day">
-      <figcaption>
-        On their picnic, Sarah and Anna read the "Do It For Your Self" book. In this book, they were reading about things that they could each do for themselves to handle tough situations.
-      </figcaption>
-    </figure>
+            <figure class="gallery-image hideThis">
+                <img src="img/picnic-blanket.jpg" alt="Three girls put down a picnic blanket in the grass on a bright sunny day">
+                <figcaption>After their hike, they found a quiet spot. They then set out a blanket...</figcaption>
+            </figure>
 
-    <div class="button_holder">
-      <button id="button_previous">Previous</button>
-      <p id="stepper"></p>
-      <button id="button_next">Next</button>
-    </div>
-
-   </main>
+            <figure class="gallery-image hideThis">
+                <img src="img/reading-book-at-picnic.jpg" alt="Two friends read a book on a flowery blanket in the grass on a bright sunny day">
+                <figcaption>On their picnic, Sarah and Anna read the "Do It For Your Self" book...</figcaption>
+            </figure>
+        </div>
+    </main>
+    
     <footer>Maya Loy</footer>
-  </body>
-</html>
-<!-- JavaScript -->
+
+    <!-- JavaScript -->
     <script>
         // Variables to track the gallery
         const images = document.querySelectorAll('.gallery-image');
         let currentIndex = 0;
 
-        // Function to update gallery display
+        // Function to show the current image
         function showImage(index) {
             images.forEach((img, i) => {
                 img.classList.toggle('hideThis', i !== index);
             });
-            document.getElementById('stepper').innerText = `${index + 1} of ${images.length}`;
         }
 
-        // Show initial image
+        // Show the first image initially
         showImage(currentIndex);
 
-        // Function for Next button
-        function nextImage() {
+        // Add click event to the gallery container to go to the next image
+        document.querySelector('.gallery-container').addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % images.length;
             showImage(currentIndex);
-        }
-
-        // Function for Previous button
-        function previousImage() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage(currentIndex);
-        }
+        });
     </script>
 </body>
 </html>
