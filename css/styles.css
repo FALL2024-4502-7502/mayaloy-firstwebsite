@@ -198,9 +198,14 @@ footer {
   width: 100%;
 }
 
-/* Show the first image by default */
+/* Show the first image by default, this will be toggled by JS */
 .gallery-image:first-of-type {
   display: block;
+}
+
+/* When the 'hideThis' class is added, images are hidden */
+.hideThis {
+  display: none;
 }
 
 /* Button styles for navigation */
@@ -224,7 +229,6 @@ button {
   padding: 0.8rem 1rem;
   border-radius: 5px;
 }
-
 
 /*When the browser is at least 555px wide*/
 @media (min-width: 555px) {
