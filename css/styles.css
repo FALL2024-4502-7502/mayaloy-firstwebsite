@@ -178,3 +178,7 @@ footer {
         font-size: 1.1em; /* Adjust list item size for medium screens */
     }
 }
+.hideThis {
+    display: none;
+}
+
