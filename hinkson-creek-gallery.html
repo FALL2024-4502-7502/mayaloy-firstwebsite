@@ -48,31 +48,18 @@
                 <figcaption>On their picnic, Sarah and Anna read the "Do It For Your Self" book...</figcaption>
             </figure>
         </div>
+
+        <!-- Gallery Controls -->
+        <div class="button_holder">
+            <button id="button_previous">Previous</button>
+            <span id="stepper">1 / 5</span>
+            <button id="button_next">Next</button>
+        </div>
     </main>
     
     <footer>Maya Loy</footer>
 
     <!-- JavaScript -->
-    <script>
-        // Variables to track the gallery
-        const images = document.querySelectorAll('.gallery-image');
-        let currentIndex = 0;
-
-        // Function to show the current image
-        function showImage(index) {
-            images.forEach((img, i) => {
-                img.classList.toggle('hideThis', i !== index);
-            });
-        }
-
-        // Show the first image initially
-        showImage(currentIndex);
-
-        // Add click event to the gallery container to go to the next image
-        document.querySelector('.gallery-container').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage(currentIndex);
-        });
-    </script>
+    <script src="js/gallery.js"></script>
 </body>
 </html>
