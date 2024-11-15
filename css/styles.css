@@ -262,3 +262,32 @@ button {
     width: 25%;
   }
 }
+.gallery-example {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+.button_holder {
+    display: flex;
+    flex-direction: row;
+}
+
+button_next {  }
+button_previous {  }
+
+.stepper {  }
+
+button {
+    background-color: orange;
+    margin: 1rem;
+    padding: 1rem;
+    min-width: 10rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+}
