@@ -31,7 +31,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     margin-inline: 5px;
 }
 
