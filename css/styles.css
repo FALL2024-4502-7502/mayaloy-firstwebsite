@@ -17,33 +17,58 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation styles */
+/* Updated Navigation styles */
 nav {
-    background-color: #C3B1E1;
+    background-color: #FDFBD4;
     padding: 10px;
     width: 100%;
     text-align: center;
-    position: flex;
+    position: relative;
     top: 0;
-    justify-content: space-between;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
-    margin-inline: 5px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    justify-content: center;
+    gap: 15px; /* Add spacing between the bubbles */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline; /* Ensure inline behavior for list items */
 }
 
 nav a {
-    margin: 0 15px;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
     font-weight: 700;
-    color: White;
+    color: white;
+    padding: 10px 20px; /* Add padding for bubble effect */
+    background-color: #C3B1E1;
+    border-radius: 20px; /* Rounded corners for bubbles */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth hover effect */
 }
 
 nav a:hover {
-    color: #333; 
+    color: #333;
+    background-color: #E4D7F5; /* Slight color change on hover */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles for navigation */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Stack bubbles vertically on small screens */
+        gap: 10px; /* Adjust spacing for smaller screens */
+    }
+
+    nav a {
+        width: auto; /* Ensure buttons resize based on content */
+        padding: 10px;
+    }
 }
 
 /* Section styles */
@@ -80,7 +105,7 @@ ul li {
 /* Image styling */
 img {
     border: none;
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     display: block;
     margin: 20px auto;
@@ -107,7 +132,7 @@ footer {
   margin-inline-end: 0;
   margin: 4rem auto;
   width: 100%;
-  max-width: 700px;
+  max-width: 500px;
   display: block;  /* Show the first image by default */
 }
 
@@ -130,17 +155,17 @@ footer {
 }
 
 button {
-  background-color: #B2AC88;
+  background-color: #C3B1E1;
   border: none;
-  color: #000;
+  color: #fff;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
   display: block;
   cursor: pointer;
-  width: 100px;
+  width: 200px;
   padding: 0.8rem 1rem;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 /* Responsive styles */
