@@ -166,32 +166,6 @@ button {
 /* Responsive styles */
 @media (max-width: 600px) {
     nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    h1 {
-        font-size: 2em; /* Adjust header size for mobile */
-    }
-
-    p {
-        font-size: 1em; /* Adjust paragraph size for mobile */
-    }
-
-    ul li {
-        font-size: 1em; /* Adjust list item size for mobile */
-    }
-}
-
-/* 555px */
-@media (max-width: 555px) {
-    body {
-        padding: 10px; /* Add padding for small screens */
-    }
-
-    h1 {
-        font-size: 1.8em; /* Further reduce header size */
-    }
 
     p {
         font-size: 0.9em; /* Further reduce paragraph size */
@@ -223,7 +197,7 @@ button {
     ul li {
         font-size: 1.1em; /* Adjust list item size for medium screens */
     }
-}
+
 /* Adjust layout for media-holder sections */
 .media-holder {
     display: flex; /* Arrange content horizontally */
@@ -255,4 +229,3 @@ button {
         text-align: center; /* Center text for mobile view */
     }
 }
-
